@@ -378,8 +378,10 @@ body.loaded #loader {
     animation: fadeIn var(--transition-medium) 2.5s forwards;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    height: 100px;
-    /* Fixed height for vertical centering effect */
+    height: auto;
+    /* Removed fixed height to prevent wrapping */
+    white-space: nowrap;
+    /* Force single line */
     margin-left: auto;
     margin-right: auto;
 }
@@ -387,8 +389,11 @@ body.loaded #loader {
 .scroll-indicator {
     position: absolute;
     bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
+    /* MOVED TO RIGHT */
+    left: auto;
+    right: 80px;
+    /* Adjusted right margin */
+    transform: none;
     z-index: 2;
     color: #fff;
     display: flex;
@@ -397,6 +402,8 @@ body.loaded #loader {
     gap: 10px;
     opacity: 0;
     animation: fadeIn var(--transition-medium) 3s forwards;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    /* Improve visibility */
 }
 
 .scroll-text {
