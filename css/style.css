@@ -80,6 +80,20 @@ body {
     border-color: transparent;
 }
 
+/* Hide custom cursor on touch devices & mobile */
+@media (max-width: 768px),
+(hover: none) {
+
+    .cursor,
+    .cursor-follower {
+        display: none !important;
+    }
+
+    body {
+        cursor: auto;
+    }
+}
+
 /* Typography */
 h1,
 h2,
