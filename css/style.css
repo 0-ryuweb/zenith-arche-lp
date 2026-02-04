@@ -319,17 +319,11 @@ body.loaded #loader {
     z-index: 2;
     text-align: center;
     color: #fff;
-    mix-blend-mode: overlay;
-    /* Stylish blend */
+    mix-blend-mode: normal;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Fallback for mix-blend-mode if contrast is too low */
-@supports not (mix-blend-mode: overlay) {
-    .hero-content {
-        mix-blend-mode: normal;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-    }
-}
+/* Fallback block removed as it is now default styling */
 
 .hero-subtitle {
     font-family: var(--font-nav);
